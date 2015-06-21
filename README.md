@@ -13,6 +13,9 @@ In this sample,the custom view was just extends View(Not Viewgroup&FrameLayout)
 
 <li>Click event in home page just to do some demonstrations(to improve this in next step).
 
+####Next target
+Export to ***CircularMenuLayout***
+
 ####Renderings
 ![demo](http://i1.tietuku.com/d315b5ea062a7d42.gif)
 
@@ -20,6 +23,7 @@ In this sample,the custom view was just extends View(Not Viewgroup&FrameLayout)
 You can test the performance of this custom view in overdraw-CPU mode.
 
 ![overdraw](http://i1.tietuku.com/04e0b37196a0caf8.jpg)
+
 
 
 ####License

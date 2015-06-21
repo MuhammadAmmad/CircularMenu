@@ -68,6 +68,7 @@ public class CircleMenu extends View {
     private Bitmap bitmap7;
     private Bitmap bitmap8;
     private Paint paintLogo;
+    private Bitmap[] menuSet;
 
     private int offsetinDraw;
     private int offsetDegrees = 0;
@@ -121,6 +122,7 @@ public class CircleMenu extends View {
         bitmap6 = BitmapFactory.decodeResource(getResources(), R.drawable.circle_send_order);
         bitmap7 = BitmapFactory.decodeResource(getResources(), R.drawable.circle_set);
         bitmap8 = BitmapFactory.decodeResource(getResources(), R.drawable.circle_wait_order);
+        menuSet = new Bitmap[]{bitmap1, bitmap2, bitmap3, bitmap4, bitmap5, bitmap6, bitmap7, bitmap8};
         circlePoint = new Circle(bitmapLogo.getWidth() / 2 - getBitmapWidth(bitmapLogo) / 4, (display_h - dp2px(TOOLBAR_H)) / 2);
     }
 
@@ -135,7 +137,6 @@ public class CircleMenu extends View {
         canvas.save();
         canvas.saveLayerAlpha(0, 0, display_w, display_h, 0xff, LAYER_FLAGS);
         canvas.restore();
-        Bitmap[] menuSet = {bitmap1, bitmap2, bitmap3, bitmap4, bitmap5, bitmap6, bitmap7, bitmap8};
         offsetinDraw = (offsetDegrees + offsetHistory) % 360;
         for (int i = 0; i < 8; i++) {
             canvas.save();
@@ -149,7 +150,9 @@ public class CircleMenu extends View {
 
     }
 
-
+    /**
+     * Store coordinate origin while drawing the circle menu
+     */
     private class Circle {
         int x;
         int y;
@@ -273,6 +276,9 @@ public class CircleMenu extends View {
     }
 
     /**
+     * Determine whether the point in the picture.
+     * Calculate whether the smallest inscribed circle contains the point(ix,iy),will be deprecated soon.
+     *
      * @param b          Bitmap menu representative
      * @param ix         X coordinate position
      * @param iy         Y coordinate position
@@ -285,6 +291,21 @@ public class CircleMenu extends View {
         double x0 = RADIU * Math.cos(Math.toRadians(angle)) + circlePoint.getX();
         double y0 = RADIU * Math.sin(Math.toRadians(angle)) + circlePoint.getY();
         return ((x0 - ix) * (x0 - ix) + (y0 - iy) * (y0 - iy)) <= getMinCircleRadius(b) * getMinCircleRadius(b);
+    }
+
+    /**
+     * Determine whether the point in the picture.
+     * @param b          Bitmap menu representative
+     * @param ix         X coordinate position
+     * @param iy         Y coordinate position
+     * @param siteOffset the site offset degrees of menu
+     * @return <li>true menu touched</li>
+     * <li>false empty area touched</li>
+     * @see com.moose.circularmenu.CircleMenu#isMenuTouched(int, int, Bitmap, int)
+     */
+    private boolean isRectMenuTouched(int ix, int iy, Bitmap b, int siteOffset) {
+        int angle = getOffsetHistory() + siteOffset;
+        return false;
     }
 
     static class SavedState extends BaseSavedState {
