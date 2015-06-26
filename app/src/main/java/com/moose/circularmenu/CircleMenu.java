@@ -114,14 +114,14 @@ public class CircleMenu extends View {
 
         bitmapLogo = BitmapFactory.decodeResource(getResources(), R.drawable.account_small);
         RADIU = getBitmapWidth(bitmapLogo) * 3 / 4;
-        bitmap1 = BitmapFactory.decodeResource(getResources(), R.drawable.circle_account);
-        bitmap2 = BitmapFactory.decodeResource(getResources(), R.drawable.circle_appinfo);
-        bitmap3 = BitmapFactory.decodeResource(getResources(), R.drawable.circle_kefu);
-        bitmap4 = BitmapFactory.decodeResource(getResources(), R.drawable.circle_my_order);
-        bitmap5 = BitmapFactory.decodeResource(getResources(), R.drawable.circle_neworder);
-        bitmap6 = BitmapFactory.decodeResource(getResources(), R.drawable.circle_send_order);
-        bitmap7 = BitmapFactory.decodeResource(getResources(), R.drawable.circle_set);
-        bitmap8 = BitmapFactory.decodeResource(getResources(), R.drawable.circle_wait_order);
+        bitmap1 = BitmapFactory.decodeResource(getResources(), R.drawable.circle1);
+        bitmap2 = BitmapFactory.decodeResource(getResources(), R.drawable.circle2);
+        bitmap3 = BitmapFactory.decodeResource(getResources(), R.drawable.circle3);
+        bitmap4 = BitmapFactory.decodeResource(getResources(), R.drawable.circle4);
+        bitmap5 = BitmapFactory.decodeResource(getResources(), R.drawable.circle5);
+        bitmap6 = BitmapFactory.decodeResource(getResources(), R.drawable.circle6);
+        bitmap7 = BitmapFactory.decodeResource(getResources(), R.drawable.circle7);
+        bitmap8 = BitmapFactory.decodeResource(getResources(), R.drawable.circle8);
         menuSet = new Bitmap[]{bitmap1, bitmap2, bitmap3, bitmap4, bitmap5, bitmap6, bitmap7, bitmap8};
         circlePoint = new Circle(bitmapLogo.getWidth() / 2 - getBitmapWidth(bitmapLogo) / 4, (display_h - dp2px(TOOLBAR_H)) / 2);
     }

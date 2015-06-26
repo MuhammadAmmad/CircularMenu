@@ -70,16 +70,16 @@ public class MainActivity extends AppCompatActivity implements CircleMenu.MenuCa
                 Toast.makeText(mContext, "版本信息", Toast.LENGTH_SHORT).show();
                 break;
             case KEFU:
-                Toast.makeText(mContext, "产能客服", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "客服", Toast.LENGTH_SHORT).show();
                 break;
             case MY_ORDER:
                 Toast.makeText(mContext, "我的订单", Toast.LENGTH_SHORT).show();
                 break;
             case NEW_ORDER:
-                Toast.makeText(mContext, "新建询价单", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "新建订单", Toast.LENGTH_SHORT).show();
                 break;
             case SEND_ORDER:
-                Toast.makeText(mContext, "发起生产订单", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "生产订单", Toast.LENGTH_SHORT).show();
                 break;
             case SET:
                 Toast.makeText(mContext, "设置", Toast.LENGTH_SHORT).show();
